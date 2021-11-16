@@ -1,1 +1,18 @@
-<h1><%= @booking.game.name %></h1>
+<div class="container">
+  <div class="row mt-4 justify-content-center">
+    <div class="col-6">
+      <div class="card-trip">
+        <img src="https://www.shortlist.com/media/images/2019/05/50-greatest-video-game-covers-186-1556729312-ZIaP-column-width-inline.jpg" />
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= @booking.game.name %></h2>
+            <p><%= @booking.game.description %></p>
+            <p><%= @booking.game.console %></p>
+            <p><%= @booking.game.rating %></p>
+          </div>
+          <h2 class="card-trip-pricing"><%= @booking.game.price %></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
