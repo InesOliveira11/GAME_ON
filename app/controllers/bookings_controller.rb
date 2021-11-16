@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  # before_action :set_booking, only: [:show, :edit]
+  # before_action :set_booking, only: [:show]
 
   def index
     @bookings = Booking.all
@@ -10,24 +10,21 @@ class BookingsController < ApplicationController
     @game = Game.find(params[:game_id])
   end
 
-#   def create
-#     @booking = Booking.new(booking_params)
-#     if @booking.save
-#       redirect_to booking_path
-#     else
-#       render :new
-#     end
-#   end
+  def create
+    @game = Game.find(params[:game_id])
+    @booking = Booking.new(booking_params)
+    @booking.user = current_user
+    @booking.game = @game
+    if @booking.save!
+      redirect_to booking_path(@booking)
+    else
+      render :new
+    end
+  end
 
-#   def create
-#     @booking = booking.new(booking_params)
-#     @booking. = @list
-#     flash[:notice] = @booking.errors.full_messages.to_sentence unless @booking.save
-#     redirect_to list_path(@booking)
-#   end
-
-#   def show
-#   end
+  def show
+    @booking = Booking.find(params[:id])
+  end
 
 #   def edit
 #   end
