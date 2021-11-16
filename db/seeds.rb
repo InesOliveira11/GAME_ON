@@ -25,6 +25,7 @@ Game.destroy_all
       name: Faker::Game.title,
       description: Faker::Internet.password,
       console: Faker::Game.platform,
+      price: rand(10...80),
       rating: rand(1..5),
       user_id: user.id
     )
