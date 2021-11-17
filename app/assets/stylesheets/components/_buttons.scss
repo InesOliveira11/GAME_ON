@@ -1,0 +1,27 @@
+.btn-black {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: black;
+  transition: ease-in-out 1s;
+
+}
+
+.btn-black:hover {
+  background: black;
+  color: white;
+  text-decoration: none;
+}
+
+// to display a button to the right.
+.btn-end {
+  display:inline-block;
+  position: relative;
+  top: 30px;
+  left: 900px;
+
+}
+
+.container {
+  position: absolute;
+}
