@@ -25,10 +25,10 @@ User.destroy_all
     5.times do
     game = Game.create!(
       name: Faker::Game.title,
-      description: Faker::Internet.password,
+      description: Faker::Game.genre,
       console: Faker::Game.platform,
-      price: rand(10...80),
-      rating: rand(1..5),
+      price: Faker::Number.decimal(l_digits: 2),
+      rating: Faker::Number.within(range:0.0..5.0).round(1),
       user_id: user.id
     )
     puts "Created a game named #{game.name}"
