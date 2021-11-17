@@ -6,6 +6,7 @@
 #   movies = Movie.create( name: 'Star Wars', name: 'Lord of the Rings' )
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
+require 'open-uri'
 Booking.destroy_all
 Game.destroy_all
 User.destroy_all
@@ -29,7 +30,7 @@ user = User.create!(
     phone_number: Faker::PhoneNumber.phone_number_with_country_code)
     puts "Created a user named #{user.first_name}"
     5.times do
-    game = Game.create!(
+    game = Game.new(
       name: Faker::Game.title,
       description: Faker::Game.genre,
       console: Faker::Game.platform,
@@ -37,6 +38,9 @@ user = User.create!(
       rating: Faker::Number.within(range:0.0..5.0).round(1),
       user_id: user.id
     )
+    file = URI.open("https://media.contentapi.ea.com/content/dam/gin/images/2021/06/battlefield-2042-key-art.jpg.adapt.crop1x1.767p.jpg")
+    game.photo.attach(io: file, filename: 'poster.png', content_type: 'image/png')
+    game.save!
     puts "Created a game named #{game.name}"
   end
 end
