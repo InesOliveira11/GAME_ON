@@ -2,12 +2,15 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 320px;
 }
 
-.card-trip > img {
-  height: 300px;
+.background-card-image {
+  height: 200px;
   width: 100%;
   object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .card-trip h2 {
@@ -29,4 +32,7 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  flex-direction: column;
+  align-items: flex-start
+
 }
