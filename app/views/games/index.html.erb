@@ -13,21 +13,31 @@
     </tr>
   </thead>
 
-  <tbody>
+
+      <div class="container">
+        <div class="row mt-4">
     <% @games.each do |game| %>
-      <tr>
-        <td><%= game.name %></td>
-        <td><%= game.description %></td>
-        <td><%= game.console %></td>
-        <td><%= game.price %></td>
-        <td><%= game.rating %></td>
-        <td><%= link_to 'Show', game %></td>
-        <td><%= link_to 'Edit', edit_game_path(game) %></td>
-        <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
+          <div class="col-3">
+            <div class="card-trip">
+              <img src="https://www.shortlist.com/media/images/2019/05/50-greatest-video-game-covers-186-1556729312-ZIaP-column-width-inline.jpg" />
+              <div class="card-trip-infos">
+                <div>
+                  <h2><%= game.name %></h2>
+                  <p><%= game.description %></p>
+                  <p><%= game.console %></p>
+                  <p><%= game.rating %></p>
+                  <p><%= link_to 'Show', game %></p>
+                  <p><%= game.rating %>|<%= link_to 'Edit', edit_game_path(game) %>|<%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+                  <p><%= game.rating %></p>
+                </div>
+                <h2 class="card-trip-pricing"><%= game.price %></h2>
+              </div>
+            </div>
+          </div>
     <% end %>
-  </tbody>
-</table>
+        </div>
+      </div>
+
 
 <br>
 
