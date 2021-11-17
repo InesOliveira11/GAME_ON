@@ -1,15 +1,16 @@
 <p id="notice"><%= notice %></p>
 <div class="row justify-content-center">
   <h1 class="text-center mb-5"><h1>Games</h1>
+  <br>
 </div>
-
-    <div class="container">
+<div class="row justify-content-center">
+<div class="container">
     <div class="row mt-4">
       <% @games.each do |game| %>
       <%= link_to game_path(game) do %>
           <div class="col-3 p-3">
             <div class="card-trip">
-              <div class="background-card-image" style="background-image: url(<%= "https://www.shortlist.com/media/images/2019/05/50-greatest-video-game-covers-186-1556729312-ZIaP-column-width-inline.jpg"%>)"></div>
+              <div class="background-card-image" style="background-image: url('<%= cl_image_path game.photo.key%>')"></div>
               <% end %>
                 <div class="card-trip-infos">
                     <h2><%= game.name %></h2>
@@ -23,8 +24,4 @@
     <% end %>
         </div>
       </div>
-
-
-<br>
-
-<%= link_to 'New Game', new_game_path %>
+</div>
