@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @game.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @game.description %>
+</p>
+
+<p>
+  <strong>Console:</strong>
+  <%= @game.console %>
+</p>
+
+<p>
+  <strong>Price (£) :</strong>
+  <%= @game.price %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @game.rating %>
+</p>
+
+<%= link_to 'Back', games_path %>
