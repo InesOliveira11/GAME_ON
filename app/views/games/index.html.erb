@@ -1,22 +1,10 @@
 <p id="notice"><%= notice %></p>
 <div class="row justify-content-center">
   <h1 class="text-center mb-5"><h1>Games</h1>
+  <br>
 </div>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Console</th>
-      <th>Price (£) </th>
-      <th>Rating</th>
-      <th colspan="4"></th>
-    </tr>
-  </thead>
-
-
-    <div class="container">
+<div class="row justify-content-center">
+<div class="container">
     <div class="row mt-4">
       <% @games.each do |game| %>
       <%= link_to game_path(game) do %>
@@ -36,8 +24,4 @@
     <% end %>
         </div>
       </div>
-
-
-<br>
-
-<%= link_to 'New Game', new_game_path %>
+</div>
