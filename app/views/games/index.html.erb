@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
-<h1>Games</h1>
+<div class="row justify-content-center">
+  <h1 class="text-center mb-5"><h1>Games</h1>
+</div>
 
 <table>
   <thead>
@@ -14,24 +16,21 @@
   </thead>
 
 
-      <div class="container">
-        <div class="row mt-4">
-    <% @games.each do |game| %>
-          <div class="col-3">
+    <div class="container">
+    <div class="row mt-4">
+      <% @games.each do |game| %>
+      <%= link_to game_path(game) do %>
+          <div class="col-3 p-3">
             <div class="card-trip">
-              <img src="https://www.shortlist.com/media/images/2019/05/50-greatest-video-game-covers-186-1556729312-ZIaP-column-width-inline.jpg" />
-              <div class="card-trip-infos">
-                <div>
-                  <h2><%= game.name %></h2>
-                  <p><%= game.description %></p>
-                  <p><%= game.console %></p>
-                  <p><%= game.rating %></p>
-                  <p><%= link_to 'Show', game %></p>
-                  <p><%= game.rating %>|<%= link_to 'Edit', edit_game_path(game) %>|<%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-                  <p><%= game.rating %></p>
+              <div class="background-card-image" style="background-image: url(<%= "https://www.shortlist.com/media/images/2019/05/50-greatest-video-game-covers-186-1556729312-ZIaP-column-width-inline.jpg"%>)"></div>
+              <% end %>
+                <div class="card-trip-infos">
+                    <h2><%= game.name %></h2>
+                    <p><%= game.description %></p>
+                    <p><%= game.console %></p>
+                    <p>⭐ <%= game.rating %></p>
+                  <h2 class="card-trip-pricing">￡<%= game.price %></h2>
                 </div>
-                <h2 class="card-trip-pricing"><%= game.price %></h2>
-              </div>
             </div>
           </div>
     <% end %>
