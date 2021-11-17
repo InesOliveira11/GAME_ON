@@ -9,6 +9,14 @@ require 'faker'
 User.destroy_all
 Game.destroy_all
 
+user = User.create!(
+  first_name: "Banana",
+  last_name: "Banana",
+  email: "banana@com",
+  password: "123456banana",
+  address: "138 Kingsland Rd",
+  phone_number: "7897543672")
+
 10.times do
   user = User.create!(
     first_name: Faker::Name.first_name,
@@ -17,9 +25,7 @@ Game.destroy_all
     password: Faker::Internet.password,
     address: Faker::Address.full_address,
     phone_number: Faker::PhoneNumber.phone_number_with_country_code)
-
     puts "Created a user named #{user.first_name}"
-
     5.times do
     game = Game.create!(
       name: Faker::Game.title,
