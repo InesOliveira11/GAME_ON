@@ -1,4 +1,9 @@
-<%= simple_form_for [ @game, @booking ] do |f| %>
+<div class="container pt-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6 col-lg-4">
+    <h1 class="text-center mb-5">New Booking</h1>
+
+  <%= simple_form_for [ @game, @booking ] do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
@@ -7,7 +12,10 @@
     <%= f.input :end_date, as: :date, html5: true %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="row justify-content-center">
+    <%= f.button :submit , class: "btn-black"%>
   </div>
 <% end %>
+    </div>
+  </div>
+</div>
