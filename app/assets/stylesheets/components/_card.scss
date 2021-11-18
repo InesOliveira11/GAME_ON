@@ -2,7 +2,8 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  height: 320px;
+  height: 400px;
+  width: 250px;
 }
 
 .background-card-image {
@@ -28,11 +29,8 @@
 
 .card-trip .card-trip-infos {
   padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-  flex-direction: column;
-  align-items: flex-start
+}
 
+.prices p {
+  font-size: 15px;
 }
