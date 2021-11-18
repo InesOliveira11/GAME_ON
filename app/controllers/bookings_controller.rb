@@ -16,7 +16,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.game = @game
     if @booking.save!
-      redirect_to booking_path(@booking)
+      redirect_to user_path(current_user)
     else
       render :new
     end
@@ -29,10 +29,11 @@ class BookingsController < ApplicationController
 #   def edit
 #   end
 
-#   def update
-#     @booking.update(booking_params)
-#     redirect_to booking_path(@booking)
-#   end
+  # def update
+  #   if params[:querry] =
+  #   @booking.update(booking_params)
+  #   redirect_to booking_path(@booking)
+  # end
 
 #   def destroy
 #     @booking.destroy

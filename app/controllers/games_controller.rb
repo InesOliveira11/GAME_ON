@@ -2,7 +2,11 @@ class GamesController < ApplicationController
   before_action :set_game, only: [:show, :edit, :destroy]
 
   def index
-    @games = Game.all
+    if params[:query].present?
+      @games = Game.search_by_name_description_and_console(params[:query])
+    else
+      @games = Game.all
+    end
   end
 
   def new
@@ -27,6 +31,7 @@ class GamesController < ApplicationController
   # end
 
   def show
+    @booking = Booking.new
   end
 
   # def edit

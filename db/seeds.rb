@@ -20,7 +20,7 @@ user = User.create!(
   address: "138 Kingsland Rd",
   phone_number: "7897543672")
 
-10.times do
+8.times do
   user = User.create!(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
@@ -29,7 +29,7 @@ user = User.create!(
     address: Faker::Address.full_address,
     phone_number: Faker::PhoneNumber.phone_number_with_country_code)
     puts "Created a user named #{user.first_name}"
-    5.times do
+    3.times do
     game = Game.new(
       name: Faker::Game.title,
       description: Faker::Game.genre,
