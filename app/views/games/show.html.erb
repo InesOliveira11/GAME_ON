@@ -1,18 +1,40 @@
-<p id="notice"><%= notice %></p>
+<div class="row mt-3 ml-4">
+  <div class="col-6">
+    <p id="notice"><%= notice %></p>
 
-<div class="card-product">
-  <img src="https://www.shortlist.com/media/images/2019/05/50-greatest-video-game-covers-186-1556729312-ZIaP-column-width-inline.jpg" />
-  <div class="card-product-infos">
-    <div>
-      <h2><%= @game.name %></h2>
-      <p><strong>Console: </strong><%= @game.console %>
-      <br>
-        <strong>Description: </strong><%= @game.description %></p>
-      </p>
+    <div class="card-product">
+      <img class="img-fluid" src="https://www.shortlist.com/media/images/2019/05/50-greatest-video-game-covers-186-1556729312-ZIaP-column-width-inline.jpg" />
+      <div class="card-product-infos">
+        <div>
+          <h2><%= @game.name %></h2>
+          <p><strong>Console: </strong><%= @game.console %>
+          <br>
+            <strong>Description: </strong><%= @game.description %></p>
+          </p>
+        </div>
+        <h2 class="card-product-pricing"><%= @game.price %>£</h2>
+        <img src="https://vanderbiltc4e.com/wp-content/uploads/2017/08/Super-Mario-Avatar-500x500.jpg" class="card-product-user avatar-bordered" />
+      </div>
     </div>
-    <h2 class="card-product-pricing"><%= @game.price %>£</h2>
-    <img src="https://vanderbiltc4e.com/wp-content/uploads/2017/08/Super-Mario-Avatar-500x500.jpg" class="card-product-user avatar-bordered" />
+    <div class="m-4">
+    <%= link_to 'Back', games_path, class: "btn-black"%>
+    </div>
+  </div>
+  <div class="col-6 p-5">
+    <h1 class="text-center mb-5">New Booking</h1>
+
+    <%= simple_form_for [ @game, @booking ] do |f| %>
+      <%= f.error_notification %>
+      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+      <div class="form-inputs">
+        <%= f.input :start_date, as: :date, html5: true %>
+        <%= f.input :end_date, as: :date, html5: true %>
+      </div>
+
+      <div class="row justify-content-center mt-5">
+        <%= f.button :submit , class: "btn-show btn-lg"%>
+      </div>
+    <% end %>
   </div>
 </div>
-<%= link_to 'Back', games_path, class: "btn-show btn-lg "%>
-<%= link_to 'Booking', new_game_booking_path(@game), class: "btn-show btn-lg"%>
