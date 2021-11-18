@@ -35,7 +35,15 @@
                     <h2><%= game.name %></h2>
                     <p><%= game.description %></p>
                     <p><%= game.console %></p>
-                    <p>⭐ <%= game.rating %></p>
+                    <% counter = 0 %>
+                    <% 5.times do %>
+                      <% unless game.rating == nil %>
+                        <% if counter < game.rating  %>
+                              ⭐
+                              <% counter += 1 %>
+                        <% end %>
+                      <% end %>
+                    <% end %>
                   <h2 class="card-trip-pricing">￡<%= game.price %></h2>
                 </div>
             </div>
