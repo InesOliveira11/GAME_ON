@@ -1,0 +1,23 @@
+<%= image_tag "https://www.pinclipart.com/picdir/big/539-5394284_transparent-pikachu-png-clipart.png"%>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.first_name %>
+</p>
+
+<p>
+  <strong>Last Name:</strong>
+  <%= @user.last_name  %>
+</p>
+
+<p>
+  <strong>Your Bookings:</strong>
+  <% @bookings.each do |booking| %><br>
+    <%= booking.game.name %><br>
+    <%= booking.start_date %><br>
+    <%= booking.end_date %><br>
+  <% end %>
+</p>
+
+
+<%= link_to 'Back', users_path %>
