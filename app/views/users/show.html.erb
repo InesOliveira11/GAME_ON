@@ -1,23 +1,28 @@
-<%= image_tag "https://www.pinclipart.com/picdir/big/539-5394284_transparent-pikachu-png-clipart.png"%>
+<div class="show-page">
+<img style="width: 200px;" src="https://cdn-icons-png.flaticon.com/512/188/188987.png" alt="">
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.first_name %>
+<p class="message">
+  Welcome
+  <strong><%= @user.first_name %></strong>
+  to your bookings page!
 </p>
 
-<p>
-  <strong>Last Name:</strong>
-  <%= @user.last_name  %>
+<p class="message">
+  <strong>Your future adventures are about to start!</strong>
 </p>
 
-<p>
-  <strong>Your Bookings:</strong>
+<div class="row d-flex justify-content-center">
   <% @bookings.each do |booking| %><br>
-    <%= booking.game.name %><br>
-    <%= booking.start_date %><br>
-    <%= booking.end_date %><br>
+    <div class="col-3 mt-3 booking-card">
+      <p class="booking-name"><%= booking.game.name %></p><br>
+      <div><%= booking.start_date %></div><br>
+      <div><%= booking.end_date %></div><br>
+      <div>£ <%= booking.game.price %></div><br>
+    </div>
   <% end %>
-</p>
+</div>
 
 
-<%= link_to 'Back', users_path %>
+
+<%= link_to 'Back', users_path, class:"btn btn-black m-3" %>
+</div>
