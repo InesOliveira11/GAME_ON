@@ -3,6 +3,21 @@
   <h1 class="text-center mb-5"><h1>Pick your next adventure...</h1>
   <br>
 </div>
+  <br>
+<div class="container justify-content-center">
+<div class="search_form">
+  <%= form_tag games_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a game"
+  %>
+  <div class="row justify-content-center pt-2">
+  <%= submit_tag "Search", class: "btn btn-black" %>
+  </div>
+</div>
+<% end %>
+</div>
 <div class="row justify-content-center">
 <div class="container">
     <div class="row mt-4">
