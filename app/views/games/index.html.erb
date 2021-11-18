@@ -23,7 +23,7 @@
     <div class="row mt-4">
       <% @games.each do |game| %>
       <%= link_to game_path(game) do %>
-          <div class="col-3 p-3">
+          <div class="col-4 p-3">
             <div class="card-trip">
             <% if game.photo.present? %>
               <div class="background-card-image" style="background-image: url('<%= cl_image_path game.photo.key%>')"></div>
