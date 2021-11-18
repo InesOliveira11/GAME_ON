@@ -13,14 +13,12 @@
         <option value="Nintendo Switch">Nintendo Switch</option>
       </select>
     <%= f.input :price %>
-    <%= f.input :rating %>
-      <select class="container form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-        <option selected>Rating</option>
-        <option value="1">⭐</option>
-        <option value="2">⭐⭐</option>
-        <option value="3">⭐⭐⭐</option>
-        <option value="4">⭐⭐⭐⭐</option>
-        <option value="5">⭐⭐⭐⭐⭐</option>
+      <select class="container form-select form-select-lg mb-3" name="rating" id="star_rating" aria-label=".form-select-lg example">
+        <option name="1" value="1">1</option>
+        <option name="2" value="2">2</option>
+        <option name="3" value="3">3</option>
+        <option name="4" value="4">4</option>
+        <option name="5" value="5">5</option>
       </select>
     <%= f.input :photo, as: :file %>
   </div>
