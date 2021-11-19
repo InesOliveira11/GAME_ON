@@ -9,4 +9,5 @@ class Game < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
+
 end
