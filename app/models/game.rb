@@ -5,8 +5,8 @@ class Game < ApplicationRecord
 
   include PgSearch::Model
   pg_search_scope :search_by_name_description_and_console,
-    against: [ :name, :description, :console ],
-    using: {
-      tsearch: { prefix: true }
-    }
+                  against: %i[name description console],
+                  using: {
+                    tsearch: { prefix: true }
+                  }
 end

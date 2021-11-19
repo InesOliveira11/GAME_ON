@@ -26,8 +26,8 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
   end
 
-#   def edit
-#   end
+  #   def edit
+  #   end
 
   # def update
   #   if params[:querry] =
@@ -35,16 +35,16 @@ class BookingsController < ApplicationController
   #   redirect_to booking_path(@booking)
   # end
 
-#   def destroy
-#     @booking.destroy
-#     redirect_to booking_path
-#   end
+  #   def destroy
+  #     @booking.destroy
+  #     redirect_to booking_path
+  #   end
 
-#   private
+  #   private
 
-#   def set_booking
-#     @booking = Booking.find(params[:id])
-#   end
+  #   def set_booking
+  #     @booking = Booking.find(params[:id])
+  #   end
 
   def booking_params
     params.require(:booking).permit(:start_date, :end_date, :user_id, :game_id)

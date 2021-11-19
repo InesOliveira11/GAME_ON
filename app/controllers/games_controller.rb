@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
-  before_action :set_game, only: [:show, :edit, :destroy]
+  before_action :set_game, only: %i[show edit destroy]
 
   def index
     if params[:query].present?
