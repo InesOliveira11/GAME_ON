@@ -1,10 +1,22 @@
-<p id="notice"><%= notice %></p>
+<div class="games-page">
 <div class="row justify-content-center">
   <h1 class="text-center mb-5"><h1>Pick your next adventure...</h1>
   <br>
 </div>
   <br>
 <div class="container justify-content-center">
+<<<<<<< HEAD
+  <div class="search_form">
+    <%= form_tag games_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a game"
+    %>
+    <div class="row justify-content-center pt-2">
+    <%= submit_tag "Search", class: "btn btn-black" %>
+    </div>
+=======
 <div class="search_form">
   <%= form_tag games_path, method: :get do %>
   <%= text_field_tag :query,
@@ -14,9 +26,9 @@
   %>
   <div class="row justify-content-center pt-2">
   <%= submit_tag "Search", class: "btn btn-black" %>
+>>>>>>> faab20ad55d24b304dbbdb76480c741cf06b2957
   </div>
-</div>
-<% end %>
+  <% end %>
 </div>
 <div class="row m-0">
 <div class="container">
@@ -66,4 +78,5 @@
     <% end %>
         </div>
       </div>
+</div>
 </div>
