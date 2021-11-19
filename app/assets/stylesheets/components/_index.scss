@@ -12,4 +12,15 @@
 
 body {
   background: $light-grey;
+  background-image: url("https://unsplash.com/photos/9AmKnNZw3GA");
+}
+
+.games-page {
+  background-image: url("https://source.unsplash.com/9AmKnNZw3GA/1600x900");
+  height: calc(100vh-66px);
+  width: 100%;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: opacity(50%);
 }
