@@ -13,7 +13,7 @@
 
 <div class="row d-flex justify-content-center">
   <% @bookings.each do |booking| %><br>
-    <div class="col-3 mt-3 booking-card">
+    <div class="col-3 mt-3 booking-card card-category">
       <p class="booking-name"><%= booking.game.name %></p><br>
       <div><%= booking.start_date %></div><br>
       <div><%= booking.end_date %></div><br>
