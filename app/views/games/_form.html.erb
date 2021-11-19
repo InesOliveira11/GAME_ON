@@ -5,6 +5,7 @@
   <div class="form-inputs">
     <%= f.input :name %>
     <%= f.input :description %>
+
     <%= f.input :console, as: :select, collection: ["PS5", "XBOX S & X", "Nintendo Switch", "PC"], prompt: "Pick platform", label: false %>
       <%# <select class="container form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="console">
         <option selected>Consoles</option>
@@ -13,6 +14,7 @@
         <option value="Nintendo Switch">Nintendo Switch</option>
         <option value="PC">PC</option>
       </select> %>
+
     <%= f.input :price %>
       <select class="container form-select form-select-lg mb-3" name="rating" id="star_rating" aria-label=".form-select-lg example">
         <option name="1" value="1">1</option>
