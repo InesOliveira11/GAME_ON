@@ -1,22 +1,9 @@
 <div class="games-page">
 <div class="row justify-content-center">
-  <h1 class="text-center mb-5"><h1>Pick your next adventure...</h1>
+  <h1 class="text-center pt-2 mb-5">Pick your next adventure...</h1>
   <br>
 </div>
-  <br>
 <div class="container justify-content-center">
-<<<<<<< HEAD
-  <div class="search_form">
-    <%= form_tag games_path, method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find a game"
-    %>
-    <div class="row justify-content-center pt-2">
-    <%= submit_tag "Search", class: "btn btn-black" %>
-    </div>
-=======
 <div class="search_form">
   <%= form_tag games_path, method: :get do %>
   <%= text_field_tag :query,
@@ -26,12 +13,11 @@
   %>
   <div class="row justify-content-center pt-2">
   <%= submit_tag "Search", class: "btn btn-black" %>
->>>>>>> faab20ad55d24b304dbbdb76480c741cf06b2957
   </div>
   <% end %>
 </div>
 <div class="row m-0">
-<div class="container">
+<div class="container m-0 p-0">
     <div class="row mt-4">
       <% @games.each do |game| %>
       <%= link_to game_path(game) do %>
@@ -43,9 +29,9 @@
               <div class="background-card-image" style="background-image: url('https://www.google.com/search?q=gamepad+pics&rlz=1C5CHFA_enGB965GB970&sxsrf=AOaemvJXEHAstqGDkmq1cnNE9K6k5QoS7w:1637168036711&tbm=isch&source=iu&ictx=1&fir=9QBwmvn9zU6wKM%252C-XbVcD_SxsDUFM%252C_%253BgoP0jiTaQD0T6M%252C-XbVcD_SxsDUFM%252C_%253BDHGmIej7RXAG2M%252Cxt5Q1pzjs3e4nM%252C_%253BKdtvO-1ZrDYGjM%252Cxt5Q1pzjs3e4nM%252C_%253BEPCVXhLTnW8LEM%252Cr_MzRScF8qVIFM%252C_%253BZNxxdZ4AHPWWXM%252C-XbVcD_SxsDUFM%252C_%253BSctBvfuv7b4fZM%252CiQb9JW-r1jDMuM%252C_%253BXY_PWHnozN4m4M%252CnEBmrgGtHKbm5M%252C_%253ByVGp75ZGg_R0DM%252Cj2AnDOpsi4HIgM%252C_%253Bf9GlH3UEzyVh7M%252CFtPCU0F5DxOb6M%252C_%253Bm5a4PZMn4FhR1M%252C-XbVcD_SxsDUFM%252C_%253BM8q7bH8szI46BM%252CFu81baY-gA0EsM%252C_%253BE7Hku6M3eGstVM%252CLRFU9Q1WktTnZM%252C_%253B-1ELS9-6nmywzM%252CrS_7-1m8XOlSgM%252C_&vet=1&usg=AI4_-kT9qTbZuUp2EefuH1FzGGxPr8dJLg&sa=X&ved=2ahUKEwiQyY-a7p_0AhWHUcAKHfE_D5oQ9QF6BAgXEAE#imgrc=yVGp75ZGg_R0DM')"></div>
             <% end %>
               <% end %>
-                <div class="card-trip-infos">
-                    <h2><%= game.name %></h2>
-                    <p  class="mt-1 mb-3"><%= game.description %></p>
+                <div class="card-trip-infos m-2">
+                    <h2 class="m-2"><%= game.name %></h2>
+                    <p  class="m-2"><%= game.description %></p>
                     <div class="container prices d-flex justify-content-between m-2">
                       <% if game.console == ("PS5") %>
                           <svg style="width: 50px;" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>PlayStation 5</title><path d="M10.4499 14.56905a1.38287 1.38287 0 001.38287-1.38287v-2.37841a.83315.83315 0 01.83416-.83315h2.68403a.03732.03732 0 00.03631-.03732V9.4612a.03631.03631 0 00-.0363-.0363H12.1172a1.38287 1.38287 0 00-1.38388 1.38286v2.38043a.83416.83416 0 01-.83315.83415H7.25347a.03631.03631 0 00-.03631.03632v.47608a.03631.03631 0 00.03631.03631zm6.04488-3.21156V9.4612a.03631.03631 0 01.0363-.0363h7.30772a.03732.03732 0 01.03732.0363v.47609a.03833.03833 0 01-.03732.03732h-6.20929a.03631.03631 0 00-.0363.03631v1.2356a.3954.3954 0 00.3964.39741h4.62267a1.46457 1.46457 0 010 2.9251h-6.0812a.03631.03631 0 01-.0363-.0363v-.47407a.03631.03631 0 01.0363-.03632h5.53047a.91586.91586 0 10-.00706-1.8307h-4.72656a.83315.83315 0 01-.83315-.83416m-10.84608.28645a.83466.83466 0 000-1.66932H.03654a.03732.03732 0 01-.03632-.03732V9.4612a.03631.03631 0 01.03632-.0363h6.1528a1.38388 1.38388 0 010 2.76673H1.9328a.83315.83315 0 00-.83315.83416v1.51299a.03631.03631 0 01-.03631.0363H.03654a.03631.03631 0 01-.03632-.04034v-1.51298a1.38287 1.38287 0 011.38388-1.37783Z"/></svg>
@@ -69,8 +55,9 @@
                       <% end %>
                       </p>
                     </div>
-                    <div class="card-trip-pricing mt-3">
+                    <div class="card-trip-pricing">
                     <h2>￡<%= game.price %></h2>
+                    <br>
                     </div>
                 </div>
             </div>

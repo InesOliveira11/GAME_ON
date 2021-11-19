@@ -12,16 +12,15 @@
 @import "_search_form";
 
 body {
-  background: $light-grey;
-  background-image: url("https://unsplash.com/photos/9AmKnNZw3GA");
+  background-image: linear-gradient(to left top, #a683e3, #baa2ec, #cfc1f4, #e6e0fa, #ffffff);
 }
 
-.games-page {
-  background-image: url("/Users/ines_oliveira/code/InesOliveira11/GAME_ON/app/assets/images/background-booking-card.png");
-  height: calc(100vh-66px);
-  width: 100%;
-  z-index: 1;
-  background-repeat: no-repeat;
-  background-size: cover;
-  backdrop-filter: opacity(50%);
-}
+// .games-page {
+//   background-image: url("https://source.unsplash.com/9AmKnNZw3GA/1600x900");
+//   height: calc(100vh-66px);
+//   width: 100%;
+//   z-index: 1;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   backdrop-filter: opacity(50%);
+// }
