@@ -22,7 +22,7 @@ user = User.create!(
 
 game = Game.new(
   name: "Grand Theft Auto V",
-  description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.",
+  description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
   console: "PlayStation 4",
   price: Faker::Number.decimal(l_digits: 2),
   rating: Faker::Number.within(range: 0.0..5.0).round(1),
@@ -34,7 +34,7 @@ game.save!
 
 game = Game.new(
   name: "Minecraft",
-  description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.",
+  description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
   console: "XBOX One",
   price: Faker::Number.decimal(l_digits: 2),
   rating: Faker::Number.within(range: 0.0..5.0).round(1),
@@ -46,7 +46,7 @@ game.save!
 
 game = Game.new(
   name: "Black Desert Online",
-  description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.",
+  description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
   console: "Xbox Series X",
   price: Faker::Number.decimal(l_digits: 2),
   rating: Faker::Number.within(range: 0.0..5.0).round(1),
@@ -58,7 +58,7 @@ game.save!
 
 game = Game.new(
   name: "The Legend of Zelda",
-  description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.",
+  description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
   console: "Nintendo Switch",
   price: Faker::Number.decimal(l_digits: 2),
   rating: Faker::Number.within(range: 0.0..5.0).round(1),
@@ -70,7 +70,7 @@ game.save!
 
 game = Game.new(
   name: "Spider-Man",
-  description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.",
+  description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
   console: "PlayStation",
   price: Faker::Number.decimal(l_digits: 2),
   rating: Faker::Number.within(range: 0.0..5.0).round(1),
@@ -82,7 +82,7 @@ game.save!
 
 game = Game.new(
   name: "Ghost of Tsushima",
-  description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.",
+  description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
   console: "PlayStation",
   price: Faker::Number.decimal(l_digits: 2),
   rating: Faker::Number.within(range: 0.0..5.0).round(1),
@@ -94,7 +94,7 @@ game.save!
 
 game = Game.new(
   name: "God of War",
-  description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.",
+  description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
   console: "PlayStation 4",
   price: Faker::Number.decimal(l_digits: 2),
   rating: Faker::Number.within(range: 0.0..5.0).round(1),
@@ -106,7 +106,7 @@ game.save!
 
 game = Game.new(
   name: "Cyberpunk 2077",
-  description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.",
+  description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
   console: "PlayStation",
   price: Faker::Number.decimal(l_digits: 2),
   rating: Faker::Number.within(range: 0.0..5.0).round(1),
@@ -118,7 +118,7 @@ game.save!
 
 game = Game.new(
   name: "Stardew Valley",
-  description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.",
+  description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
   console: "Nintendo Switch",
   price: Faker::Number.decimal(l_digits: 2),
   rating: Faker::Number.within(range: 0.0..5.0).round(1),
