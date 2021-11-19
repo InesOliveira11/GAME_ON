@@ -9,6 +9,7 @@
 @import "footer";
 @import "bookingcard";
 @import "flashes";
+@import "_search_form";
 
 body {
   background: $light-grey;
@@ -16,7 +17,7 @@ body {
 }
 
 .games-page {
-  background-image: url("https://source.unsplash.com/9AmKnNZw3GA/1600x900");
+  background-image: url("/Users/ines_oliveira/code/InesOliveira11/GAME_ON/app/assets/images/background-booking-card.png");
   height: calc(100vh-66px);
   width: 100%;
   z-index: 1;

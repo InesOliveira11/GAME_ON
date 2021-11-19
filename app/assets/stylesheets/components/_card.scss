@@ -5,6 +5,13 @@
   height: 400px;
   width: 250px;
 }
+.card-trip-show {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  height: 450px;
+}
 
 .background-card-image {
   height: 200px;
@@ -40,4 +47,9 @@
 
 .prices p {
   font-size: 15px;
+}
+
+.card-trip-pricing h2 {
+  text-align: left;
+  margin-left: 224px;
 }
